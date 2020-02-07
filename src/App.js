@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import YouTubeVideoEmbed from './youtube-video-embed.js';
 
 class App extends Component {
   constructor(state) {
@@ -10,11 +11,11 @@ class App extends Component {
   }
   
   componentDidMount() {
-    
+    // setInterval(() => this.setState({ theDate: new Date() }), 1000);
   }
   
   render() {
-    const dateThing = <p>The d</p>
+    
     return (
       <div className="app">
         <header className="App-header">
@@ -23,6 +24,7 @@ class App extends Component {
         </header>
 
         <section className="content">
+          {this.state.theDate && <p>It's currently {this.state.theDate.toString()}.</p>}
           <p>Here are my favorite things about you, as a class:</p>
           <ul>
             <li>You're brilliant!</li>
@@ -32,6 +34,8 @@ class App extends Component {
             </li>
             <li>You're awake and paying rapt attention (... right?)</li>
           </ul>
+          
+          <YouTubeVideoEmbed embedUrl="https://www.youtube.com/embed/iTvBy_TjUR4"></YouTubeVideoEmbed>
         </section>
       </div>
     );
