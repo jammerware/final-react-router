@@ -1,8 +1,13 @@
+body {
+  color: #dedede;
+}
 
 .app {
   background-color: #282c34;
   color: white;
+  margin: 0 auto;
   min-height: 100vh;
+  max-width: 1080px;
 }
 
 .app a {
@@ -10,7 +15,7 @@
 }
 
 .app-logo {
-  height: 40vmin;
+  height: 35vmin;
   pointer-events: none;
 }
 
