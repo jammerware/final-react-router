@@ -2,6 +2,7 @@ dependencies:
   react: 16.8.6
   react-dom: 16.8.6
   react-scripts: 3.0.1
+  react-youtube: 7.9.0
 packages:
   /@babel/code-frame/7.0.0:
     dependencies:
@@ -6663,6 +6664,10 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-L19Fq5HjMhYjT9U62rZo607AmTs=
+  /load-script/1.0.0:
+    dev: false
+    resolution:
+      integrity: sha1-BJGTngvuVkPuSUp+PaPSuscMbKQ=
   /loader-fs-cache/1.0.2:
     dependencies:
       find-cache-dir: 0.1.1
@@ -8801,6 +8806,16 @@ packages:
       fsevents: 2.0.6
     resolution:
       integrity: sha512-LKEjBhVpEB+c312NeJhzF+NATxF7JkHNr5GhtwMeRS1cMeLElMeIu8Ye7WGHtDP7iz7ra4ryy48Zpo6G/cwWUw==
+  /react-youtube/7.9.0:
+    dependencies:
+      fast-deep-equal: 2.0.1
+      prop-types: 15.7.2
+      youtube-player: 5.5.2
+    dev: false
+    peerDependencies:
+      react: '>=0.14.1'
+    resolution:
+      integrity: sha512-2+nBF4qP8nStYEILIO1/SylKOCnnJUxuZm+qCeWA0eeZxnWZIIixfAeAqbzblwx5L1n/26ACocy3epm9Glox8w==
   /react/16.8.6:
     dependencies:
       loose-envify: 1.4.0
@@ -9453,6 +9468,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-pNprY1/8zMoz9w0Xy5JZLeleVXo=
+  /sister/3.0.2:
+    dev: false
+    resolution:
+      integrity: sha512-p19rtTs+NksBRKW9qn0UhZ8/TUI9BPw9lmtHny+Y3TinWlOa9jWh9xB0AtPSdmOy49NJJJSSe0Ey4C7h0TrcYA==
   /sisteransi/1.0.0:
     dev: false
     resolution:
@@ -10918,6 +10937,14 @@ packages:
     dev: false
     resolution:
       integrity: sha512-Lhz8TLaYnxq/2ObqHDql8dX8CJi97oHxrjUcYtzKbbykPtVW9WB+poxI+NM2UIzsMgNCZTIf0AQwsjK5yMAqZw==
+  /youtube-player/5.5.2:
+    dependencies:
+      debug: 2.6.9
+      load-script: 1.0.0
+      sister: 3.0.2
+    dev: false
+    resolution:
+      integrity: sha512-ZGtsemSpXnDky2AUYWgxjaopgB+shFHgXVpiJFeNB5nWEugpW1KWYDaHKuLqh2b67r24GtP6HoSW5swvf0fFIQ==
 registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
@@ -10925,3 +10952,4 @@ specifiers:
   react: ^16.8.6
   react-dom: ^16.8.6
   react-scripts: ^3.0.1
+  react-youtube: ^7.9.0

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import YouTubeVideoEmbed from './youtube-video-embed.js';
+import YouTube from 'react-youtube';
 
 class App extends Component {
   constructor(state) {
@@ -35,7 +35,7 @@ class App extends Component {
             <li>You're awake and paying rapt attention (... right?)</li>
           </ul>
           
-          <YouTubeVideoEmbed embedUrl="https://www.youtube.com/embed/iTvBy_TjUR4"></YouTubeVideoEmbed>
+          <YouTube videoId="iTvBy_TjUR4" width="100%"></YouTube>
         </section>
       </div>
     );
