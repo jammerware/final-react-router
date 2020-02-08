@@ -20,6 +20,7 @@ class TweetsService {
       const randomItem = trending[Math.floor(Math.random() * trending.length)];
       if (!retVal.some((item) => item.text === randomItem.text)) {
         retVal.push(randomItem);
+        randomItem.tweetCount = this.getRandomTweetCount();
       }
     }
     

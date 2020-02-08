@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./App.css";
-import { ProgressBar } from './progress-bar'
 import { TweetsService } from './tweets-service';
 
 class App extends Component {
@@ -11,25 +10,21 @@ class App extends Component {
   
   componentDidMount() {
     this.loadTrendingItems();
-    setInterval(() => {
-      this.loadTrendingItems();
-    }, 10000);
   }
   
   render() {
+    // build a list of li elements to represent trending info
+    // based on state
     const trendingElements = this.buildTrendingElements();
     
     // now we just describe how we want our trending panel to look:
     return (
       <div className="app">
         <header className="App-header">
-          <h1>Trending on Twitter</h1>
+          <h1>{this.props.greeting}</h1>
         </header>
 
         <section className="content">
-          {/* Don't worry about this progress bar stuff. */}
-          {!this.state.trending && <ProgressBar></ProgressBar>}
-          
           {/* We create a ul, and we put the li items we created inside it */}
           <ul className="trending-list">{trendingElements}</ul>
         </section>
@@ -41,12 +36,7 @@ class App extends Component {
     // this TweetsService object is a thing our app can use to get up-to-the-second
     // information from Twitter.
     const service = new TweetsService();
-    
-    this.setState({ trending: null });
-    setTimeout(() => {
-      // get the trending items and store them so we can render them on the page
-      this.setState({ trending: service.getTrending() });
-    }, 1000);
+    this.setState({ trending: service.getTrending() });
   }
   
   buildTrendingElements() {
