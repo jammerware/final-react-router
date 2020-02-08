@@ -26,7 +26,7 @@ class App extends Component {
 
         <section className="content">
           {/* We create a ul, and we put the li items we created inside it */}
-          <ul className="trending-list">{trendingElements}</ul>
+          <ul className="trending-list">{trendingElements}</ul>t
         </section>
       </div>
     );
