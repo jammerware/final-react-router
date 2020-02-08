@@ -6,8 +6,7 @@ import { TweetsService } from './tweets-service';
 class App extends Component {
   constructor(state) {
     super(state);
-    
-    this.state = { theDate: null };
+    this.state = {};
   }
   
   componentDidMount() {

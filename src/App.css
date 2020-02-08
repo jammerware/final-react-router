@@ -22,9 +22,14 @@ header {
   font-size: calc(10px + 2vmin);
 }
 
+ul {
+  padding: 0;
+}
+
 li {
   list-style-type: none;
-  border-bottom: dashed 1px #ffffff;  
+  border-bottom: dashed 1px #ffffff; 
+  margin: 0;
   padding: 1rem 0;
 }
 
