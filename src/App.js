@@ -10,16 +10,20 @@ class App extends Component {
   }
   
   componentDidMount() {
-    this.loadTweets();
+    this.loadTrendingItems();
     setInterval(() => {
-      this.loadTweets();
-    }, 5000);
+      this.loadTrendingItems();
+    }, 10000);
   }
   
-  loadTweets() {
+  loadTrendingItems() {
+    // this TweetsService object is a thing our app can use to get up-to-the-second
+    // information from Twitter.
     const service = new TweetsService();
+    
     this.setState({ trending: null });
     setTimeout(() => {
+      // get the trending items and store them so we can render them on the page
       this.setState({ trending: service.getTrending() });
     }, 1000);
   }
@@ -27,6 +31,7 @@ class App extends Component {
   render() {
     const trendingElements = []; 
 
+    // create a list item for each item that our service says is trending!
     if (this.state.trending) {
       for (let i = 0; i < this.state.trending.length; i++) {
         const trend = this.state.trending[i];
@@ -39,7 +44,10 @@ class App extends Component {
         );
       } 
     }
+    // now the variable trendingElements has an li per item that the service
+    // says is trending
     
+    // now we just describe how we want our trending panel to look:
     return (
       <div className="app">
         <header className="App-header">
@@ -47,7 +55,10 @@ class App extends Component {
         </header>
 
         <section className="content">
+          {/* Don't worry about this progress bar stuff. */}
           {!this.state.trending && <ProgressBar></ProgressBar>}
+          
+          {/* We create a ul, and we put the li items we created inside it */}
           <ul className="trending-list">{trendingElements}</ul>
         </section>
       </div>
