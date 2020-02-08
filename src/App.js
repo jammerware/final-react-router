@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import YouTube from 'react-youtube';
+import { ProgressBar } from './progress-bar'
 import { TweetsService } from './tweets-service';
 
 class App extends Component {
@@ -14,11 +13,17 @@ class App extends Component {
   componentDidMount() {
     // setInterval(() => this.setState({ theDate: new Date() }), 1000);
     this.loadTweets();
+    setInterval(() => {
+      this.loadTweets();
+    }, 5000);
   }
   
   loadTweets() {
     const service = new TweetsService();
-    this.setState({ trending: service.getTrending() });
+    this.setState({ trending: null });
+    setTimeout(() => {
+      this.setState({ trending: service.getTrending() });
+    }, 1000);
   }
   
   render() {
@@ -29,7 +34,7 @@ class App extends Component {
         const trend = this.state.trending[i];
 
         trendingElements.push(
-          <li>
+          <li key={trend.text}>
             <h2 className="trending-text">{trend.text}</h2>
             <p className="trending-type">{trend.type}</p>
           </li>
@@ -44,6 +49,7 @@ class App extends Component {
         </header>
 
         <section className="content">
+          {!this.state.trending && <ProgressBar></ProgressBar>}
           <ul className="trending-list">{trendingElements}</ul>
         </section>
       </div>
