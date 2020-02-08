@@ -23,15 +23,18 @@ class App extends Component {
   
   render() {
     const trendingElements = []; 
-    for (let i = 0; i < this.state.trending; i++) {
-      const trend = this.state.trending[i];
-      
-      trendingElements.push(
-        <li>
-          <h2>{trend.text}</h2>
-          <p>{trend.type}</p>
-        </li>
-      );
+
+    if (this.state.trending) {
+      for (let i = 0; i < this.state.trending.length; i++) {
+        const trend = this.state.trending[i];
+
+        trendingElements.push(
+          <li>
+            <h2 className="trending-text">{trend.text}</h2>
+            <p className="trending-type">{trend.type}</p>
+          </li>
+        );
+      } 
     }
     
     return (
@@ -42,7 +45,6 @@ class App extends Component {
 
         <section className="content">
           <ul className="trending-list">{trendingElements}</ul>
-
         </section>
       </div>
     );

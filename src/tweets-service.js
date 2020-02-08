@@ -13,6 +13,8 @@ class TweetsService {
       { text: "Persona 5", type: "topic" },
       { text: "Monster Hunter: World", type: "topic" },
     ];
+    
+    return trending;
   }
 }
 
