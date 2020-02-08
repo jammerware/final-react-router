@@ -1,0 +1,5 @@
+function getTrending() {
+  
+}
+
+export getTrending;
