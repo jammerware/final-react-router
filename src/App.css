@@ -47,3 +47,7 @@ li p {
 section.content {
   padding: 2rem;
 }
+
+.bullet-thing {
+  margin: 0 0.3rem;
+}

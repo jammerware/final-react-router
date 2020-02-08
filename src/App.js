@@ -26,16 +26,20 @@ class App extends Component {
 
         <section className="content">
           {/* We create a ul, and we put the li items we created inside it */}
-          <ul className="trending-list">{trendingElements}</ul>t
+          <ul className="trending-list">{trendingElements}</ul>
         </section>
       </div>
     );
   }
   
   loadTrendingItems() {
-    // this TweetsService object is a thing our app can use to get up-to-the-second
+    // this TweetsService object is a (fake) thing our app can use to get up-to-the-second
     // information from Twitter.
     const service = new TweetsService();
+    
+    // DON'T DO THIS:
+    // this.state.trending = service.getTrending();
+    // DO DO THIS:
     this.setState({ trending: service.getTrending() });
   }
   
@@ -52,7 +56,7 @@ class App extends Component {
             <h2 className="trending-text">{trend.text}</h2>
             <p>
               <span className="trending-type">{trend.type}</span>
-              &nbsp;•&nbsp;
+              <span className="bullet-thing">•</span>
               <span>{trend.tweetCount} tweets</span>
             </p>
           </li>
