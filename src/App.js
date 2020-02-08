@@ -11,7 +11,6 @@ class App extends Component {
   }
   
   componentDidMount() {
-    // setInterval(() => this.setState({ theDate: new Date() }), 1000);
     this.loadTweets();
     setInterval(() => {
       this.loadTweets();

@@ -1,5 +1,7 @@
 class TweetsService {
   getTrending() {
+    const retVal = [];
+    
     const trending = [
       { text: "#FishAreFriendsNotFood", type: "hashtag" },
       { text: "#MarmotsArePeopleToo", type: "hashtag" },
@@ -14,7 +16,14 @@ class TweetsService {
       { text: "Monster Hunter: World", type: "topic" },
     ];
     
-    return trending;
+    while (retVal.length < 5) {
+      const randomItem = trending[Math.floor(Math.random() * trending.length)];
+      if (!retVal.some((item) => item.text === randomItem.text)) {
+       retVal.push(randomItem); 
+      }
+    }
+    
+    return retVal;
   }
 }
 
