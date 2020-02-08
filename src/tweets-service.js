@@ -19,11 +19,15 @@ class TweetsService {
     while (retVal.length < 5) {
       const randomItem = trending[Math.floor(Math.random() * trending.length)];
       if (!retVal.some((item) => item.text === randomItem.text)) {
-       retVal.push(randomItem); 
+        retVal.push(randomItem);
       }
     }
     
     return retVal;
+  }
+  
+  getRandomTweetCount() {
+    return Math.floor(Math.random() * 5000);
   }
 }
 

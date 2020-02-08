@@ -16,36 +16,8 @@ class App extends Component {
     }, 10000);
   }
   
-  loadTrendingItems() {
-    // this TweetsService object is a thing our app can use to get up-to-the-second
-    // information from Twitter.
-    const service = new TweetsService();
-    
-    this.setState({ trending: null });
-    setTimeout(() => {
-      // get the trending items and store them so we can render them on the page
-      this.setState({ trending: service.getTrending() });
-    }, 1000);
-  }
-  
   render() {
-    const trendingElements = []; 
-
-    // create a list item for each item that our service says is trending!
-    if (this.state.trending) {
-      for (let i = 0; i < this.state.trending.length; i++) {
-        const trend = this.state.trending[i];
-
-        trendingElements.push(
-          <li key={trend.text}>
-            <h2 className="trending-text">{trend.text}</h2>
-            <p className="trending-type">{trend.type}</p>
-          </li>
-        );
-      } 
-    }
-    // now the variable trendingElements has an li per item that the service
-    // says is trending
+    const trendingElements = this.buildTrendingElements();
     
     // now we just describe how we want our trending panel to look:
     return (
@@ -63,6 +35,44 @@ class App extends Component {
         </section>
       </div>
     );
+  }
+  
+  loadTrendingItems() {
+    // this TweetsService object is a thing our app can use to get up-to-the-second
+    // information from Twitter.
+    const service = new TweetsService();
+    
+    this.setState({ trending: null });
+    setTimeout(() => {
+      // get the trending items and store them so we can render them on the page
+      this.setState({ trending: service.getTrending() });
+    }, 1000);
+  }
+  
+  buildTrendingElements() {
+    const trendingElements = []; 
+
+    // create a list item for each item that our service says is trending!
+    if (this.state.trending) {
+      for (let i = 0; i < this.state.trending.length; i++) {
+        const trend = this.state.trending[i];
+
+        trendingElements.push(
+          <li key={trend.text}>
+            <h2 className="trending-text">{trend.text}</h2>
+            <p>
+              <span className="trending-type">{trend.type}</span>
+              &nbsp;•&nbsp;
+              <span>{trend.tweetCount} tweets</span>
+            </p>
+          </li>
+        );
+      } 
+    }
+    // now the variable trendingElements has an li per item that the service
+    // says is trending
+    
+    return trendingElements;
   }
 }
 
