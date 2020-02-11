@@ -18,7 +18,7 @@ class App extends Component {
         </header>
 
         <section className="content">
-          <MySpecialComponent></MySpecialComponent>
+          <MySpecialComponent imgSrc="https://lh6.googleusercontent.com/proxy/ZqLnXoC9mxrxP_J_AAgfc6mXwGCvKZOF5gzeXFnVfQKKcF1jUKJN7jdQ3PBuB-tNB_PyuuUtXZIqul9hvDxOJlwHxtSBN5lQANI5GVS3YMechCC7wxZufkg8t9oWO-jNXrjVCp7mVwyD"></MySpecialComponent>
         </section>
       </div>
     );
