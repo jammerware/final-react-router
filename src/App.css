@@ -2,6 +2,7 @@
   background-color: #282c34;
   color: white;
   margin: 0 auto;
+  padding: 2rem;
   min-height: 100vh;
   max-width: 1080px;
 }
@@ -16,38 +17,4 @@ header {
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-}
-
-ul {
-  padding: 0;
-}
-
-li {
-  list-style-type: none;
-  border-bottom: dashed 1px #ffffff; 
-  margin: 0;
-  padding: 1rem 0;
-}
-
-li .trending-type {
-  font-style: italic;
-  margin: 0;
-}
-
-li .trending-text {
-  margin: 0;
-  padding: 0;
-}
-
-li p {
-  margin: 0;
-  padding: 0;
-}
-
-section.content {
-  padding: 2rem;
-}
-
-.bullet-thing {
-  margin: 0 0.3rem;
 }
