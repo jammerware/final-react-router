@@ -11,7 +11,7 @@ class MySpecialComponent extends Component {
   }
   
   render() {
-    return <div className="my-special-component" onclick={this.componentOnClick}>
+    return <div className="my-special-component" onClick={this.componentOnClick.bind(this)}>
       <p>
         Hi from <code>MySpecialComponent</code>!
         In this activity, we're going to improve this component a little. 
@@ -35,7 +35,6 @@ class MySpecialComponent extends Component {
           of the component's state gets displayed inside it.
         </li>
       </ul>
-      {this.state.clickCount}
       
       { /* This is the image with the src attribute that you should set */ }
       <img src={/* What goes here? It returns null right now, but... */null} alt="A funny comic about a Heart and a Brain"></img>
@@ -46,8 +45,7 @@ class MySpecialComponent extends Component {
   }
   
   componentOnClick(event) {
-    console.log('the thing happened')
-    this.setState({ clickCount: this.state.clickCount++ });
+    this.setState({ clickCount: this.state.clickCount + 1 });
   }
 }
 

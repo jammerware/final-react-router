@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
 import { MySpecialComponent } from './my-special-component';
-import { TweetsService } from './tweets-service';
 
 class App extends Component {
   constructor(state) {
