@@ -17,9 +17,7 @@ class MySpecialComponent extends Component {
       </p>
       <p>
           This component has a special power. Whenever you click your mouse inside it, a 
-          property in the <code>state</code> of the component increases. Change the element
-          you added in the previous step so that the <code>clickCount</code> property
-          of the component's state gets displayed inside it.
+          property called <code>clickCount</code> in the <code>state</code> of the component increases. 
       </p>
       
       { /* This is the image with the src attribute that you should set */ }
