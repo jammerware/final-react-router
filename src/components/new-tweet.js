@@ -15,8 +15,11 @@ class NewTweet extends Component {
   render() {
     return (
       <div className="new-tweet-component">
-        <textarea className="new-tweet-text" rows="6" placeholder="What's on your mind?"></textarea>
-        <input type="button" value="Post my tweet!"></input>
+        <form>
+          <textarea className="new-tweet-text" rows="6" required minLength="6" placeholder="What's on your mind?"></textarea>
+          <input type="text" required minLength="2" placeholder="What's your Twitter handle?"></input>
+          <input type="submit" onClick={this.handleSubmit} value="Post my tweet!"></input>
+        </form>
       </div>
     );
   }

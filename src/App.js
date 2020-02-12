@@ -20,11 +20,11 @@ class App extends Component {
   }
   
   render() {
-    const tweetElements = this.state.tweets.map(tweet => <ViewTweet>hi</ViewTweet>);
+    const tweetElements = this.state.tweets.map(tweet => <ViewTweet key={tweet.id}>hi</ViewTweet>);
     
     return (
       <div className="app">
-        <SiteBanner />
+        <SiteBanner bannerText="My Twitter is the best twitter" />
         <section className="content">
           <NewTweet></NewTweet>
           <hr />
