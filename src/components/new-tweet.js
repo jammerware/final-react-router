@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './new-tweet.css';
+import { TweetsService } from '../services/tweets-service';
 
 class NewTweet extends Component {
   constructor(state) {
@@ -8,6 +9,7 @@ class NewTweet extends Component {
     
     // bind event handlers to access "this"
     this.handleSubmit = this.submitClick.bind(this);
+    this.tweetsService = new TweetsService();
   }
   
   render() {
