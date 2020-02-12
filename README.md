@@ -1,7 +1,8 @@
  # Activity 6 | INFSCI 2560: Web Technologies & Standards
 
 Now that you're a React expert, you're going to do build your own little mini-twitter. Jack Dorsey did it, and he 
-[only eats one meal a day](https://www.businessinsider.com/twitter-ceo-jack-dorsey-only-eats-7-meals-per-week-2020-1). So you've totally got this.
+[only eats one meal a day](https://www.businessinsider.com/twitter-ceo-jack-dorsey-only-eats-7-meals-per-week-2020-1). So you've totally got this. If you get stuck,
+you can always [contact me](mailto:ben.stein@pitt.edu) for help.
 
 ## TASKS
 
@@ -45,13 +46,14 @@ component makes use of `state`, `props`, or both.
 so that you can see and work with the components. You don't have to create any additional tweets if you don't want to, but you can. You can also
 learn a little about how to make forms in React by looking at this component, which can be found in `new-tweet.js`.
 
-2. As you've already discovered in this class, there are many ways to reach a goal in web development (which is why it's so cool!)
+2. Once you've accomplished task 2, your likes will go away if you refresh the page. This is by design.
+
+3. As you've already discovered in this class, there are many ways to reach a goal in web development (which is why it's so cool!)
 However, to make sure you're learning what we want to help you learn, try to really utilize what we've talked in class rather than resorting to the
 tricks we've used previously (like `document.getElementById`). In general, you're welcome to look at any files in the project, but to accomplish the 
-tasks in this assignment, you'll never need to change:
-    - `index.html`
-    - `index.js`
-    - `new-tweet.js`
-    - `App.js` (unless you want to modify it as described in **Task 1** above)
+tasks in this assignment, you'll only need to change:
+    - `view-tweet.js`
+    - `site-banner.js`
+    - `App.js` (if you want to modify it as described in **Task 1** above)
     
 You're welcome to change any of the css files to make your activity a more zen place, but you don't have to.

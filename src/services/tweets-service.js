@@ -30,7 +30,7 @@ class TweetsService {
       },
       {
         id: 2,
-        text: "Check out my Glitch profile! <a href='https://glitch.com/@mcburton' target='_blank'>https://glitch.com/@mcburton</a>",
+        text: "Check out my new Glitch profile! https://glitch.com/@mcburton",
         author: "mcburton",
       },
       {
