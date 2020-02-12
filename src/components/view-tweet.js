@@ -7,7 +7,7 @@ class ViewTweet extends Component {
     super(state);
     this.handleLikeClick = this.handleLikeClick.bind(this);
     
-    {/* I wonder if this stuff here is any kind of hint... 🤔 */}
+    // I wonder if this stuff here is any kind of hint... 🤔 
     this.state = { likeCount: 0 };
     console.log("This got passed into ViewTweet. I wonder why?", this.props.tweet);
   }
