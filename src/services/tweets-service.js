@@ -24,7 +24,7 @@ class TweetsService {
       {
         id: 3,
         text: "Kids. I don't just start watching in October. #wow",
-        author: "chriscringle"
+        author: "therealsanta"
       }
     ];
     

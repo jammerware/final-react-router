@@ -1,19 +1,19 @@
 import React, { Component } from "react";
 import "./App.css";
 import { NewTweet } from './components/new-tweet';
-import { TweetsService } from' ./services/tweets-service';
+// import { TweetsService } from' ./services/tweets-service';
 
 class App extends Component {
   constructor(state) {
     super(state);
     
     this.state = { tweets: [] };
-    this.tweetsService = new TweetsService();
   }
   
   componentDidMount() {
-    const tweets = this.tweetsService.getTweets();
-    this.setState({ tweets });
+    // const tweetService = new TweetsService();
+    // const tweets = this.tweetsService.getTweets();
+    // this.setState({ tweets });
   }
   
   render() {
@@ -25,9 +25,8 @@ class App extends Component {
         </header>
 
         <section className="content">
-          <NewTweet />
+          <NewTweet></NewTweet>
           <hr />
-          
         </section>
       </div>
     );
