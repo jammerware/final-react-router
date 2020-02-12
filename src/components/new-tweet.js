@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
+import './new-tweet.css';
 
 class NewTweet extends Component {
   constructor(state) {
@@ -12,7 +13,8 @@ class NewTweet extends Component {
   render() {
     return (
       <div className="new-tweet-component">
-        <textarea className="new-tweet-text" rows="4" placeholder="What's on your mind?"></textarea>
+        <textarea className="new-tweet-text" rows="6" placeholder="What's on your mind?"></textarea>
+        
       </div>
     );
   }

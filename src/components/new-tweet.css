@@ -1,0 +1,7 @@
+textarea {
+  box-sizing: border-box;
+  font: inherit;
+  padding: 1rem;
+  resize: none;
+  width: 100%;
+}
