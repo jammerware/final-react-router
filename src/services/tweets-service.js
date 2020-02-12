@@ -8,6 +8,19 @@ class TweetsService {
     return JSON.parse(tweetsString);
   }
   
+  postTweet(tweet) {
+    // make a random id just for funsies
+    const tweetId = Math.floor(Math.random() * Math.floor(99999));
+    const tweets = this.getTweets();
+    tweets.push({
+      id: tweetId,
+      author: tweet.author,
+      text: tweet.text,
+    });
+    
+    this._saveTweets(tweets);
+  }
+  
   _init() {
     const STOCK_TWEETS = [
       {

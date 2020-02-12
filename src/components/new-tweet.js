@@ -56,11 +56,13 @@ class NewTweet extends Component {
     if (form.checkValidity()) {
       event.preventDefault();
       
-      console.log("new tweet", this.state.text, this.state.author);
-      // this.tweetsService.push({
-      //   text: ""
-      // })
+      this.tweetsService.postTweet({ text: this.state.text, author: this.state.author });
       this.setState({ text: '', author: '', isNewTweetPosted: true });
+      setTimeout(() => this.setState({ isNewTweetPosted: false}), 2000);
+      
+      if (this.props.onTweetPosted) {
+        this.props.onTweetPosted();
+      }
     }
   }
 }
