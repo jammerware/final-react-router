@@ -9,23 +9,46 @@ class NewTweet extends Component {
     
     // bind event handlers to access "this"
     this.handleSubmit = this.submitClick.bind(this);
+    this.handleTextChange = this.handleTextChange.bind(this);
     this.tweetsService = new TweetsService();
   }
   
   render() {
     return (
       <div className="new-tweet-component">
-        <form>
-          <textarea className="new-tweet-text" rows="6" required minLength="6" placeholder="What's on your mind?"></textarea>
+        <form id="new-tweet-form" onSubmit={this.handleSubmit}>
+          <textarea 
+            className="new-tweet-text" 
+            rows="6" 
+            required 
+            minLength="6" 
+            onChange={this.handleTextChange}
+            placeholder="What's on your mind?"></textarea>
           <input type="text" required minLength="2" placeholder="What's your Twitter handle?"></input>
-          <input type="submit" onClick={this.handleSubmit} value="Post my tweet!"></input>
+          <input type="submit" value="Post my tweet!"></input>
         </form>
       </div>
     );
   }
+  
+  handleAuthorChange(event) {
+    this.setState({ newTweetAuthor: event.currentTarget.value });
+  }
+  
+  handleTextChange(event) {
+    this.setState({ newTweetText: event.currentTarget.value });
+  }
     
-  submitClick() {
-    
+  submitClick(event) {
+    const form = document.getElementById("new-tweet-form");
+    if (form.checkValidity()) {
+      event.preventDefault();
+      
+      console.log("new tweet", this.state.newTweetText, this.state.newTweetAuthor);
+      // this.tweetsService.push({
+      //   text: ""
+      // })
+    }
   }
 }
 
