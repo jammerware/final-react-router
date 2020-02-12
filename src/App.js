@@ -1,11 +1,19 @@
 import React, { Component } from "react";
 import "./App.css";
 import { NewTweet } from './components/new-tweet';
+import { TweetsService } from' ./services/tweets-service';
 
 class App extends Component {
   constructor(state) {
     super(state);
-    this.state = {};
+    
+    this.state = { tweets: [] };
+    this.tweetsService = new TweetsService();
+  }
+  
+  componentDidMount() {
+    const tweets = this.tweetsService.getTweets();
+    this.setState({ tweets });
   }
   
   render() {
@@ -18,6 +26,8 @@ class App extends Component {
 
         <section className="content">
           <NewTweet />
+          <hr />
+          
         </section>
       </div>
     );
