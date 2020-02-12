@@ -5,27 +5,37 @@ class ViewTweet extends Component {
   
   constructor(state) {
     super(state);
+    this.handleLikeClick = this.handleLikeClick.bind(this);
     
+    {/* I wonder if this stuff here is any kind of hint... 🤔 */}
     this.state = { likeCount: 0 };
-    this
+    console.log("This got passed into ViewTweet. I wonder why?", this.props.tweet);
   }
   
   render() {
     return <div className="view-tweet-component">
       <div className="tweet-content">
-        View tweet
+        {/* TASK 2: Well, this explains the whole "The text of the tweet" thing. What can we do about that? */}
+        <p>"The text of the tweet"</p>
+        <p className="author-info">by <strong>@{this.props.tweet.author}</strong></p>
       </div>
-      <div className="likes">{this.state.likeCount} like(s)</div>
-      <input className="like-button" type="button" value="Like"></input>
+      
+      {/* TASK 2: Here's part of the "likes" problem. The ViewTweet component is hard-coded to always display 0 likes. */}
+      <div className="likes">0 like(s)</div>
+      
+      <input className="like-button" type="button" value="Like" onClick={this.handleLikeClick}></input>
     </div>;
   }
   
   handleLikeClick() {
-    // This seems to be where the problem is - when the like button is clicked, 
-    // no code runs at all! That can't be right. Write some code here to respond
-    // appropriately. When you're done, you should see the like count in the component
-    // increase by one every time "Like" is clicked.
-    
+    /*
+      TASK 2
+      Here's another big issue. When the like button is clicked, nothing but a log statement runs! 
+      That can't be right. Write some code here to respond appropriately. When you're done here and
+      have addressed the problem in render() above, you should see the like count increase by 1 every time
+      you click the button.
+    */
+    console.log("Like clicked!");
   }
 }
 

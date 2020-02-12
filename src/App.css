@@ -24,3 +24,7 @@ h1 {
 hr {
   margin: 1.5rem 0;
 }
+
+strong {
+  font-weight: bold;
+}

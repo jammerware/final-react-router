@@ -18,8 +18,7 @@ we see that it says "Decent Twitter". Change `site-banner.js` so that the compon
 
 You may have noticed that The `ViewTweet` component has some interesting bugs. 
 
-- No matter what text you enter for each tweet, the component always just displays "View Tweet".
-- We can't currently see who the author of each tweet is.
+- No matter what text you enter for each tweet, the component always just displays "The text of the tweet" (not the actual text).
 - There seems to be a Like button in this component, and the `render()` method of the component is displaying a property called `likeCount`. However, this count never
 seems to increase when the button is clicked.
 

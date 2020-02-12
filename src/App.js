@@ -18,7 +18,7 @@ class App extends Component {
   }
   
   render() {
-    const tweetElements = this.state.tweets.map(tweet => <ViewTweet key={tweet.id}>hi</ViewTweet>);
+    const tweetElements = this.state.tweets.map(tweet => <ViewTweet key={tweet.id} tweet={tweet}>hi</ViewTweet>);
     
     return (
       <div className="app">
@@ -26,7 +26,7 @@ class App extends Component {
         <section className="content">
           <NewTweet onTweetPosted={this._loadTweets.bind(this)}></NewTweet>
           <hr />
-          <div class="recent-tweets">
+          <div className="recent-tweets">
             <h1>Recent tweets</h1>
             {tweetElements}
           </div>
