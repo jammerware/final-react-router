@@ -1,8 +1,10 @@
 import React, { Component } from "react";
-import "./App.css";
+import { SiteBanner } from './components/site-banner';
 import { NewTweet } from './components/new-tweet';
 import { ViewTweet } from './components/view-tweet';
 import { TweetsService } from './services/tweets-service';
+
+import './App.css';
 
 class App extends Component {
   constructor(state) {
@@ -22,10 +24,7 @@ class App extends Component {
     
     return (
       <div className="app">
-        <header>
-          <h1>Better Twitter (probably)</h1>
-        </header>
-
+        <SiteBanner />
         <section className="content">
           <NewTweet></NewTweet>
           <hr />

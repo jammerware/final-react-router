@@ -16,7 +16,7 @@ class NewTweet extends Component {
     return (
       <div className="new-tweet-component">
         <textarea className="new-tweet-text" rows="6" placeholder="What's on your mind?"></textarea>
-        
+        <input type="button" value="Post my tweet!"></input>
       </div>
     );
   }

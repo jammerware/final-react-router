@@ -5,3 +5,9 @@ textarea {
   resize: none;
   width: 100%;
 }
+
+input[type=button] {
+  display: block;
+  margin: 1rem 0;
+  width: 100%;
+}
