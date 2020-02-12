@@ -1,5 +1,4 @@
 class TweetsService {
-
   constructor() {
     this._init();
   }
