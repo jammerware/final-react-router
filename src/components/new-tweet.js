@@ -5,10 +5,14 @@ import { TweetsService } from '../services/tweets-service';
 class NewTweet extends Component {
   constructor(state) {
     super(state);
-    this.state = { tweetText: null };
+    this.state = { 
+      author: '',
+      text: '',
+    };
     
     // bind event handlers to access "this"
     this.handleSubmit = this.submitClick.bind(this);
+    this.handleAuthorChange = this.handleAuthorChange.bind(this);
     this.handleTextChange = this.handleTextChange.bind(this);
     this.tweetsService = new TweetsService();
   }
@@ -23,20 +27,28 @@ class NewTweet extends Component {
             required 
             minLength="6" 
             onChange={this.handleTextChange}
-            placeholder="What's on your mind?"></textarea>
-          <input type="text" required minLength="2" placeholder="What's your Twitter handle?"></input>
+            placeholder="What's on your mind?"
+            value={this.state.text}></textarea>
+          <input 
+            type="text" 
+            required minLength="2" 
+            onChange={this.handleAuthorChange}
+            placeholder="What's your Twitter handle?"
+            value={this.state.author}></input>
           <input type="submit" value="Post my tweet!"></input>
         </form>
+        
+        {this.state.isNewTweetPosted && <p>Your tweet has been posted!</p>}
       </div>
     );
   }
   
   handleAuthorChange(event) {
-    this.setState({ newTweetAuthor: event.currentTarget.value });
+    this.setState({ author: event.currentTarget.value });
   }
   
   handleTextChange(event) {
-    this.setState({ newTweetText: event.currentTarget.value });
+    this.setState({ text: event.currentTarget.value });
   }
     
   submitClick(event) {
@@ -44,10 +56,11 @@ class NewTweet extends Component {
     if (form.checkValidity()) {
       event.preventDefault();
       
-      console.log("new tweet", this.state.newTweetText, this.state.newTweetAuthor);
+      console.log("new tweet", this.state.text, this.state.author);
       // this.tweetsService.push({
       //   text: ""
       // })
+      this.setState({ text: '', author: '', isNewTweetPosted: true });
     }
   }
 }
