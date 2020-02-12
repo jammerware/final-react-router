@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import { NewTweet } from './components/new-tweet';
-// import { TweetsService } from' ./services/tweets-service';
+import { TweetsService } from './tweets-service';
 
 class App extends Component {
   constructor(state) {
@@ -13,7 +13,7 @@ class App extends Component {
   componentDidMount() {
     // const tweetService = new TweetsService();
     // const tweets = this.tweetsService.getTweets();
-    // this.setState({ tweets });
+    // this.setState({ tweets: [] });
   }
   
   render() {

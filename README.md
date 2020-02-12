@@ -5,5 +5,5 @@ Now that you're a React expert, you're going to do build your own little mini-tw
 
 ## Steps to activity success
 
-1. Remix this project. Don't forget to give it a more descriptive name (not that Glitch's random names aren't adorable.)
+1. Remix this project. Don't forget to give it a more descriptive name (not that Glitch's random names aren't adorable).
 2. 

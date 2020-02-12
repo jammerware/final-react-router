@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './new-tweet.css';
-import { TweetsService } from '../services/tweets-service';
+import { TweetsService } from '../tweets-service';
 
 class NewTweet extends Component {
   constructor(state) {
