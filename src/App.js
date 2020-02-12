@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
 import { NewTweet } from './components/new-tweet';
-import { TweetsService } from './tweets-service';
+import { ViewTweet } from './components/view-tweet';
+import { TweetsService } from './services/tweets-service';
 
 class App extends Component {
   constructor(state) {
@@ -11,13 +12,14 @@ class App extends Component {
   }
   
   componentDidMount() {
-    // const tweetService = new TweetsService();
-    // const tweets = this.tweetsService.getTweets();
-    // this.setState({ tweets: [] });
+    const tweetsService = new TweetsService();
+    const tweets = tweetsService.getTweets();
+    this.setState({ tweets });
   }
   
   render() {
-    // now we just describe how we want our trending panel to look:
+    const tweetElements = this.state.tweets.map(tweet => <ViewTweet>hi</ViewTweet>);
+    
     return (
       <div className="app">
         <header>
@@ -27,6 +29,7 @@ class App extends Component {
         <section className="content">
           <NewTweet></NewTweet>
           <hr />
+          {tweetElements}
         </section>
       </div>
     );
