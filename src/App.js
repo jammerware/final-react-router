@@ -22,7 +22,7 @@ class App extends Component {
     
     return (
       <div className="app">
-        <SiteBanner bannerText="My Twitter is the best twitter" />
+        <SiteBanner bannerText="The BEST Twitter" />
         <section className="content">
           <NewTweet onTweetPosted={this._loadTweets.bind(this)}></NewTweet>
           <hr />
