@@ -13,7 +13,7 @@ class App extends Component {
     return (
       <div className="app">
         <header>
-          <h1>Hi, INFSCI 2560. You're React engineers now!</h1>
+          <h1>Better Twitter (probably)</h1>
         </header>
 
         <section className="content">
