@@ -1,0 +1,13 @@
+.view-tweet-component {
+  width: 100%;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.tweet-content {
+  flex-grow: 1;  
+}
+
+.like-button {
+  margin-left: 2rem;
+}

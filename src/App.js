@@ -26,7 +26,10 @@ class App extends Component {
         <section className="content">
           <NewTweet onTweetPosted={this._loadTweets.bind(this)}></NewTweet>
           <hr />
-          {tweetElements}
+          <div class="recent-tweets">
+            <h1>Recent tweets</h1>
+            {tweetElements}
+          </div>
         </section>
       </div>
     );

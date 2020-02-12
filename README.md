@@ -1,4 +1,4 @@
-# INFSCI 2560: Web Technologies & Standards | Activity 6
+ # Activity 6 | INFSCI 2560: Web Technologies & Standards
 
 Now that you're a React expert, you're going to do build your own little mini-twitter. Jack Dorsey did it, and he 
 [only eats one meal a day](https://www.businessinsider.com/twitter-ceo-jack-dorsey-only-eats-7-meals-per-week-2020-1). So you've totally got this.
@@ -10,7 +10,9 @@ Then do the following!
 
 **Tasks**
 
-1. Some absent-minded developer (who will go unnamed) seems to have gotten sidetracked in the middle of sprucing up the 
+1. Some absent-minded engineer (who will go unnamed) seems to have gotten sidetracked in the middle of a task. If you look at `App.js`, you'll see that an
+attribute of the `SiteBanner` component suggests that the header at the top of the page should say "My Twitter is the best twitter", but when we look at the page,
+we see it says "Decent Twitter". 
 
 2. You may have noticed that The `ViewTweet` component has some interesting bugs. 
 
