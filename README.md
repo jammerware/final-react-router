@@ -6,7 +6,7 @@ you can always [contact me](mailto:ben.stein@pitt.edu) for help.
 
 ## TASKS
 
-Start off by remixing this project. Don't forget to give it a more descriptive name (not that Glitch's random names aren't adorable).
+Start off by remixing this project. Don't forget to give it a more descriptive name (not that Glitch's random names like `buttery-wednesday-goldfinch` aren't adorable).
 Then do the following!
 
 ### Task 1
@@ -20,7 +20,7 @@ you can modify the appropriate attribute in`App.js` to choose a title more suita
 
 ### Task 2
 
-There are three tweets in local storage being displayed by the `ViewTweet` component. However, you may have noticed that it has some interesting bugs. 
+There are three tweets in local storage, and each are being displayed by a `ViewTweet` component. However, you may have noticed that the component has some interesting bugs. 
 
 - No matter what text you enter for each tweet, the component always just displays "The text of the tweet" _(rather than the actual text)_.
 - There seems to be a Like button in this component, and the component is displaying the number of likes the tweet has received. However, this count never
@@ -31,7 +31,8 @@ might just get a little push in the right direction...
 
 ### Task 3
 
-For this task, you can **choose one** of several options. These vary in difficulty, so choose whichever makes the most sense to you.
+For this task, you can **choose one** of several options. In the comments of your assignment submission, draw my attention to what you did so I can fully appreciate
+your genius.
 
 - Modify the `ViewTweet` component so that it displays the date/time of the last like (when you click the like button). You should be able to do this without using
 `document.getElementById` or similar functions.
@@ -55,5 +56,6 @@ tasks in this assignment, you'll only need to change:
     - `view-tweet.js`
     - `site-banner.js`
     - `App.js` (if you want to modify it as described in **Task 1** above)
+    - Any Javascript or other files you choose to add to make your activity even more dope.
     
 You're welcome to change any of the css files to make your activity a more zen place, but you don't have to.
