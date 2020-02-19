@@ -8,7 +8,7 @@ class ViewTweet extends Component {
     this.handleLikeClick = this.handleLikeClick.bind(this);
     
     // I wonder if this stuff here is any kind of hint... 🤔 
-    this.state = { likeCount: 0 };
+    this.state = { likeCount: 0 , lastLikeTime: " "};
     console.log("This got passed into ViewTweet. I wonder why?", this.props.tweet);
   }
   
@@ -21,7 +21,9 @@ class ViewTweet extends Component {
       </div>
       
       {/* TASK 2: Here's part of the "likes" problem. The ViewTweet component is hard-coded to always display 0 likes. */}
-      <div className="likes"> {this.state.likeCount} like(s)</div>
+      <div className="likes"> {this.state.likeCount} like(s)
+        <p> Time: {this.state.lastLikeTime.toString()}</p>
+      </div>
       
       <input className="like-button" type="button" value="Like" onClick={this.handleLikeClick}></input>
     </div>;
@@ -36,7 +38,7 @@ class ViewTweet extends Component {
       you click the button.
     */
     console.log("Like clicked!");
-    this.setState({ likeCount: this.state.likeCount + 1 });
+    this.setState({ likeCount: this.state.likeCount + 1 ,lastLikeTime: new Date()});
     
   }
 }
