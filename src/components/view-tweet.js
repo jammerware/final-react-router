@@ -21,7 +21,7 @@ class ViewTweet extends Component {
       </div>
       
       {/* TASK 2: Here's part of the "likes" problem. The ViewTweet component is hard-coded to always display 0 likes. */}
-      <div className="likes">0 like(s)</div>
+      <div className="likes"> {this.state.likeCount} like(s)</div>
       
       <input className="like-button" type="button" value="Like" onClick={this.handleLikeClick}></input>
     </div>;
@@ -36,6 +36,8 @@ class ViewTweet extends Component {
       you click the button.
     */
     console.log("Like clicked!");
+    this.setState({ likeCount: this.state.likeCount + 1 });
+    
   }
 }
 
