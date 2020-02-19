@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
 class SiteBanner extends Component { 
-  render() {let bannerText = "Decent Twitter" ;
+  render() {
    return (
       <header>
-       <h1>Decent Twitter</h1>
+       <h1>{this.props.bannerText}</h1>
       </header>
     );
   }
