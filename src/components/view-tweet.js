@@ -16,7 +16,7 @@ class ViewTweet extends Component {
     return <div className="view-tweet-component">
       <div className="tweet-content">
         {/* TASK 2: Well, this explains the whole "The text of the tweet" thing. What can we do about that? */}
-        <p>"The text of the tweet"</p>
+        <p>{this.props.tweet.text}</p>
         <p className="author-info">by <strong>@{this.props.tweet.author}</strong></p>
       </div>
       
