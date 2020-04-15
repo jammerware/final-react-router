@@ -24,7 +24,7 @@ class App extends Component {
     
     return (
       <div className="app">
-        <Nav />
+        <navigation />
         <SiteBanner bannerText="The BEST Twitter" />
         <section className="content">
           <NewTweet onTweetPosted={this._loadTweets.bind(this)}></NewTweet>
