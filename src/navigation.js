@@ -2,7 +2,15 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Nav, Navbar, NavItem, NavDropdown,Form, Button} from "react-bootstrap";
+import { 
+  Button,
+  Form,
+  FormControl,
+  Nav, 
+  Navbar, 
+  NavItem, 
+  NavDropdown,
+} from "react-bootstrap";
 
 function navigation() {
   return (
