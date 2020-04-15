@@ -3,7 +3,7 @@ import { SiteBanner } from './components/site-banner';
 import { NewTweet } from './components/new-tweet';
 import { ViewTweet } from './components/view-tweet';
 import { TweetsService } from './services/tweets-service';
-import nav
+import nav from './src/nav';
 
 import './App.css';
 
@@ -23,6 +23,7 @@ class App extends Component {
     
     return (
       <div className="app">
+        <nav />
         <SiteBanner bannerText="The BEST Twitter" />
         <section className="content">
           <NewTweet onTweetPosted={this._loadTweets.bind(this)}></NewTweet>
