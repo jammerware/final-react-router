@@ -4,6 +4,7 @@ import { NewTweet } from './components/new-tweet';
 import { ViewTweet } from './components/view-tweet';
 import { TweetsService } from './services/tweets-service';
 import nav from './src/nav';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './App.css';
 
@@ -23,7 +24,7 @@ class App extends Component {
     
     return (
       <div className="app">
-        <nav />
+        <Nav />
         <SiteBanner bannerText="The BEST Twitter" />
         <section className="content">
           <NewTweet onTweetPosted={this._loadTweets.bind(this)}></NewTweet>
