@@ -4,7 +4,6 @@ import { NewTweet } from './components/new-tweet';
 import { ViewTweet } from './components/view-tweet';
 import { TweetsService } from './services/tweets-service';
 import { navigation } from './navigation';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './App.css';
 
