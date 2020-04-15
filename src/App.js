@@ -3,7 +3,7 @@ import { SiteBanner } from './components/site-banner';
 import { NewTweet } from './components/new-tweet';
 import { ViewTweet } from './components/view-tweet';
 import { TweetsService } from './services/tweets-service';
-import nav from './src/nav';
+import { navigation } from './src/navigation';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './App.css';
@@ -29,7 +29,7 @@ class App extends Component {
         <section className="content">
           <NewTweet onTweetPosted={this._loadTweets.bind(this)}></NewTweet>
           <hr />
-          <div className="recent-tweets">
+          <div className="single-blog-view">
             <h1>Recent tweets</h1>
             {tweetElements}
           </div>
